@@ -53,6 +53,7 @@ RUN chmod +x /usr/bin/tini
 ENTRYPOINT ["/usr/bin/tini", "--"]
 
 RUN adduser --disabled-password --gecos '' ds 
+RUN echo "ds:iloveff" | chpasswd
 # useradd -ms /bin/bash ds
 USER ds
 WORKDIR /home/ds
