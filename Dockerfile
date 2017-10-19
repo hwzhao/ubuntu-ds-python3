@@ -8,6 +8,7 @@ RUN apt-get install -y --no-install-recommends \
 	fonts-dejavu \
 	gfortran \
 	gcc 
+RUN apt-get -y install sudo
 RUN apt-get -y install python3 python3-pip
 RUN apt-get -y install pandoc texlive texlive-latex-extra texlive-xetex
 RUN apt-get autoclean
