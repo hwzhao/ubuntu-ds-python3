@@ -54,6 +54,7 @@ ENTRYPOINT ["/usr/bin/tini", "--"]
 
 RUN adduser --disabled-password --gecos '' ds 
 RUN echo "ds:iloveff" | chpasswd
+RUN usermod -aG sudo username
 # useradd -ms /bin/bash ds
 USER ds
 WORKDIR /home/ds
